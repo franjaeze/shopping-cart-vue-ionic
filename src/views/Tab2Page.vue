@@ -12,10 +12,11 @@
           <ion-title size="large">Drinks</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-button @click="getRecomendation"> Get Recomendation</ion-button>
-  <div v-if="recomendation" >   {{  recomendation.name}} <b> ----- >  $</b>{{ recomendation.price }}<br>
+      <ion-button v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
+  <div v-if="recomendation" >  
+    <h1 class="recomendation">Pick of the day</h1> <div class="recomendationbox">{{  recomendation.name}} <b> ----- >  $</b>{{ recomendation.price }}<br>
                               <img  class="imgthumb" :src="recomendation.img"></div>
-
+</div>
       <listItem v-if="recomendation" :food="state.food"/> 
       <listItem 
         v-for="food in resultado.encontrado"
@@ -95,5 +96,31 @@ const getMenu =  async () => {
   align-items: center;
   
  
+}
+
+.recomendation{
+  font-weight: 800;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #8a3402aa;
+}
+.recomendationbox{
+  border-color: #8a3402fb;
+  border-radius: 2%;
+  border-style: double;
+  background-color: #8a340225;
+  margin: 3px;
+  padding: 3px;
+   
+  transition: 0.5s all;
+}
+.recomendationbox:hover{
+  border-color: #ad8604fb;
+  color: rgba(88, 1, 1, 0.733);
+  border-radius: 5%;
+  border-style: double;
+  background-color: #8a340225;
+  margin: 3px;
+  padding: 3px;
+  transform: scale(1.05);
 }
 </style>

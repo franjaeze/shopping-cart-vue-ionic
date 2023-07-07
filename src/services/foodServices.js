@@ -19,6 +19,15 @@ const getFood = async () => {
     }
 }
 
+const getIceCream = async () => {
+    try {
+        const response = await apiClient.get('/ice-cream')
+
+        return response.data
+    } catch (error) {
+        throw new Error("Error de conexion")
+    }
+}
 
 const getDrinks = async () => {
     try {
@@ -29,4 +38,4 @@ const getDrinks = async () => {
         throw new Error("Error de conexion")
     }
 }
-export { getFood, getDrinks };
+export { getFood, getDrinks,getIceCream };

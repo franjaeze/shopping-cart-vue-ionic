@@ -12,9 +12,10 @@
           <ion-title size="large">Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-button @click="getRecomendation"> Get Recomendation</ion-button>
-  <div v-if="recomendation" >   {{  recomendation.name}} <b> ----- >  $</b>{{ recomendation.price }}<br>
-                              <img  class="imgthumb" :src="recomendation.img"></div>
+      <ion-button  v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
+  <div v-if="recomendation" >  <h1 class="recomendation">Pick of the day</h1><div class="recomendationbox">
+                      {{  recomendation.name}} <b> ----- >  $</b>{{ recomendation.price }}<br>
+                              <img  class="imgthumb" :src="recomendation.img"></div></div>
 
       <listItem v-if="recomendation" :food="state.food"/> 
       <listItem 

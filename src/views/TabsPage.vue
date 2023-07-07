@@ -13,6 +13,12 @@
           <ion-label>Drinks</ion-label>
         </ion-tab-button>
 
+        <ion-tab-button tab="tab4" href="/tabs/tab4">
+          <ion-icon aria-hidden="true" :icon="iceCream" />
+          <ion-label>Dessert</ion-label>
+        </ion-tab-button>
+    
+
         <ion-tab-button tab="tab3" href="/tabs/tab3">
           <ion-icon aria-hidden="true" :icon="card" />
           <ion-label>Bill</ion-label>
@@ -24,5 +30,5 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { restaurant, card, wine } from 'ionicons/icons';
+import { restaurant, card, wine,iceCream } from 'ionicons/icons';
 </script>
