@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 const getFood = async () => {
     try {
-        const response = await apiClient.get('/our-foods')
+        const response = await apiClient.get('/best-foods')
 
         return response.data
     } catch (error) {
