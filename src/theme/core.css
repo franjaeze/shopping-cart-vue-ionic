@@ -1,0 +1,140 @@
+
+
+/* ---------------------------------------------EFECTO LOCO DE VEGETALES MOVIENDOSE DE ACA PARA ALLA  ------------------
+                                                ---- EN LAS COLUMNAS DE LOS COSTADOS, PANTALLA GRANDE ----- */
+
+#side {
+ 
+	/* max-height: 600px; */
+ 
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('../../carrots.png'), 
+		url('../../eggplant.png'), 
+		url('../../chili.png'), 
+		url('../../onion.png'), 
+		url('../../spinach.png'); 
+	background-repeat: repeat-y;
+	background-position: 
+		0 0%,
+		0 20%,
+		0 40%,
+		0 80%,
+		0 100%;
+	background-size:  
+		2500px 200px 100px 50px 10px,
+		800px 200px 100px 50px 10px,
+		500px 200px 100px 50px 105px,
+		800px 200px 100px 50px 10px,
+		400px 260px;
+/* 	animation: 20s para infinite backwards; */
+    animation: 15s para ease-in 0.1s infinite;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-500px 100%,
+			-800px 100%,
+			500px 10%,
+			800px 100%,
+			1010px 10%;
+
+      background-size:  
+		250px,
+		80px,
+		500px,
+		80px,
+		40px;
+		}
+	}
+.alignment {
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-right: 15px;
+
+}
+
+.margin {
+  margin-right: 15px;
+}
+
+.ion-toolbar--end {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.gap{
+  display:flex ;
+  flex-wrap: wrap;
+ 
+}
+.accomodation{
+  list-style: none;
+  flex-basis: 33.333333%
+}
+
+
+
+
+
+
+                        /*  ----------------EFECTO COOL DE DESPLAZAMIENTO AUTOMATICO  ------------------ */
+
+/* #main{
+  background: rgb(28,29,29);
+background: linear-gradient(0deg, rgba(28,29,29,1) 0%, rgba(79,32,51,1) 20%, rgba(75,12,28,1) 46%, rgba(249,18,18,1) 74%, rgba(253,187,45,1) 100%);
+
+
+
+
+  height: 100%;
+  width: 100%;
+ 
+ 
+  background-color: #E8BA9B;
+ 
+  background-size: cover;
+  animation: scrollBg 3 3s linear forwards;
+
+}     @keyframes scrollBg {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-3330px);
+  }
+}             */
+
+ 
+@media (min-width:991px){
+
+ion-card{
+    background-color: #3d3c3c4b;
+
+    
+  }
+
+  ion-content{
+    color:red;
+  }
+#main{
+  background: rgb(28,29,29);
+background: linear-gradient(0deg, rgba(28,29,29,1) 0%, rgba(79,32,51,1) 20%, rgba(75,12,28,1) 46%, rgba(249,18,18,1) 74%, rgba(253,187,45,1) 100%);
+}
+.generalTitle {
+  position: relative;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fdfdfd;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  perspective: 500px;
+  text-shadow: 0px 0px 5px #504f4b, 0px 0px 10px #6d6345d9, 0px 0px 10px #9c8249,
+    0px 0px 20px #a57229;
+}
+
+}

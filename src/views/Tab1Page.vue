@@ -15,9 +15,9 @@
       </ion-header>
       <ion-grid>
         <ion-row>
-          <ion-col size="0" size-md="3">
+          <ion-col id="side" size="0" size-md="3">
           </ion-col>
-          <ion-col size="12" size-md="6">
+          <ion-col id="main" size="12" size-md="6">
             <ion-button v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
             <div v-if="recomendation">
               <h1 class="recomendation">Pick of the day</h1>
@@ -27,11 +27,11 @@
               </div>
             </div>
 
-
-            <listItem v-if="recomendation" :food="state.food" />
-            <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" />
+<div class="gap">
+            <listItem class="accomodation" v-if="recomendation" :food="state.food" />
+            <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" /></div>
           </ion-col>
-          <ion-col size="0" size-md="3"></ion-col>
+          <ion-col id="side" size="0" size-md="3"></ion-col>
         </ion-row></ion-grid>
     </ion-content>
   </ion-page>
@@ -84,22 +84,5 @@ const getMenu = async () => {
 
 </script> 
 <style>
-.alignment {
-  display: inline-flex;
-  justify-content: flex-start;
-  margin-right: 15px;
 
-}
-
-.margin {
-  margin-right: 15px;
-}
-
-.ion-toolbar--end {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-
-}
 </style>

@@ -15,7 +15,7 @@
       </ion-header>
       <ion-grid>
         <ion-row>
-          <ion-col size="0" size-md="3">
+          <ion-col id="side" size="0" size-md="3">
           </ion-col>
           <ion-col size="12" size-md="6">
             <ion-button v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
@@ -28,7 +28,7 @@
             <listItem v-if="recomendation" :food="state.food" />
             <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" />
           </ion-col>
-          <ion-col size="0" size-md="3"></ion-col>
+          <ion-col id="side" size="0" size-md="3"></ion-col>
         </ion-row></ion-grid>
     </ion-content>
   </ion-page>
