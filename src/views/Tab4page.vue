@@ -19,14 +19,14 @@
                     </ion-col>
                     <ion-col size="12" size-md="6">
                         <ion-button v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
-                        <div v-if="recomendation">
+                        <div v-if="recomendation" class="recomendationbox">
                             <h1 class="recomendation">Pick of the day</h1>
-                            <div class="recomendationbox">{{ recomendation.name }} <b> ----- > $</b>{{ recomendation.price
-                            }}<br>
-                                <img class="imgthumb" :src="recomendation.img">
-                            </div>
+
+
+                            <listItem :food="recomendation" />
                         </div>
-                        <listItem v-if="recomendation" :food="state.food" />
+
+
                         <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" />
                     </ion-col>
                     <ion-col id="side" size="0" size-md="3"></ion-col>
@@ -132,4 +132,5 @@ const getMenu = async () => {
     margin: 3px;
     padding: 3px;
     transform: scale(1.05);
-}</style>
+}
+</style>
