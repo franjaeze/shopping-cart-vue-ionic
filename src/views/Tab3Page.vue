@@ -17,7 +17,7 @@
           </ion-col>
           <ion-col size="12" size-md="6">
             <ion-card>
-              <ion-icon  id="side" :icon="cart" size="large" />
+              <ion-icon    :icon="cart" size="large" />
               <ion-text>Amount of items ordered {{ totalItems }}</ion-text>
               <ion-card-title>
                 Items
@@ -59,7 +59,7 @@
 
             </div>
           </ion-col>
-          <ion-col id="side" size="0" size-md="3"></ion-col>
+          <ion-col size="0" size-md="3"></ion-col>
         </ion-row></ion-grid>
     </ion-content>
 
