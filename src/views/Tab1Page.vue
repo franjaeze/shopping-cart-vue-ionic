@@ -1,12 +1,13 @@
 <template>
-  <ion-page>
-    <ion-header class="ion-toolbar--end">
-      <ion-toolbar>
-        <ion-title>Menu </ion-title>
+  <ion-page>    
+    <ion-header >
+      <ion-toolbar class="ion-toolbar--end">
+       <ion-title>  <img src="../../public/logo.png" alt="logo">Menu   <ion-icon class="alignment" aria-hidden="true" size="large" :icon="cart" />
+    {{ cartItems }} </ion-title>
       </ion-toolbar>
-      <ion-icon class="alignment" aria-hidden="true" size="large" :icon="cart" />
-      <p class="margin">{{ cartItems }}</p>
+    
     </ion-header>
+
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
@@ -38,6 +39,7 @@
 </template>
 
 <script setup lang="ts">
+import Header from '../components/Header.vue'
 import { IonPage, IonRow, IonCol, IonGrid, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonButton } from '@ionic/vue';
 import { getFood } from '../services/foodServices.js'
 import listItem from '@/components/listItem.vue';
@@ -84,5 +86,15 @@ const getMenu = async () => {
 
 </script> 
 <style>
+ion-toolbar img{
+  margin-top:0.25em;
+  margin-right: 2em;
+  height: 2em;
+  width: 9em;
+  display: inline-flex;
+  border-radius: 10%;
+  border-color:  rgb(190, 134, 13)  ;
+  border-style: solid;
+}
 
 </style>
