@@ -1,21 +1,15 @@
 <template>
-    <ion-page>
-        <ion-header>
+            
+        <ion-header  >
             <ion-toolbar class="ion-toolbar--end">
-                <ion-title> <img src="../../public/logo.png" alt="logo">Menu <ion-icon class="alignment" aria-hidden="true"
+                <ion-title class="inline"> <img src="../../public/logo.png" alt="logo">Menu <ion-icon class="alignment" aria-hidden="true"
                         size="large" :icon="cart" />
-                    <!-- {{ cartItems }} --> </ion-title>
+       <!--              {{ cartItems }}  --> </ion-title>
             </ion-toolbar>
 
         </ion-header>
-        <ion-content :fullscreen="true">
-            <ion-header collapse="condense">
-                <ion-toolbar>
-                    <ion-title size="large">Menu</ion-title>
-                </ion-toolbar>
-            </ion-header>
-        </ion-content>
-    </ion-page>
+   
+     
 </template>
 
 <script lang="ts" >
@@ -26,10 +20,18 @@ import {
     IonHeader,
     IonToolbar,
     IonTitle,
+    IonIcon
 
 } from "@ionic/vue";
+/* import { storeToRefs } from 'pinia';
+import { useCartStore } from '../store/cartStore.js';
+import {ref } from "vue";
 
+const cartStore = useCartStore();
+const { totalItems } = storeToRefs(cartStore);
 
+const cartItems = ref(totalItems)
+ */
 export default {
     name: "Header",
 
@@ -40,7 +42,7 @@ export default {
         IonPage,
         IonHeader,
         IonToolbar,
-        IonTitle,
+        IonTitle,IonIcon
 
     },
 
@@ -48,11 +50,15 @@ export default {
   
     
     return {
-      cart
+      cart,
+    
     };
   },
 }
 </script>
+<style>
+ 
+</style>
  
 
 

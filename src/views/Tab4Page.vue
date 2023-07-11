@@ -1,19 +1,8 @@
 <template>
     <ion-page>
-        <ion-header >
-            <ion-toolbar class="ion-toolbar--end">
-                <ion-title class="inline"> <img src="../../public/logo.png" alt="logo"> Dessert  <ion-icon class="inline" aria-hidden="true" size="large" :icon="cart" />
-            {{ cartItems }}</ion-title>
-                
-            </ion-toolbar>
-           
-        </ion-header>
+        
         <ion-content :fullscreen="true">
-            <ion-header collapse="condense">
-                <ion-toolbar>
-                    <ion-title size="large">Dessert</ion-title>
-                </ion-toolbar>
-            </ion-header>
+            
             <ion-grid>
                 <ion-row>
                     <ion-col id="side" size="0" size-md="3">

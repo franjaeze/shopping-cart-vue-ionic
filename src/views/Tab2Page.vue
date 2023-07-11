@@ -1,22 +1,8 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar class="ion-toolbar--end">
-
-        <ion-title class="inline"> <img src="../../public/logo.png" alt="logo"> Drinks <ion-icon class="inline"
-            aria-hidden="true" size="large" :icon="cart" />
-          {{ cartItems }} 
-        </ion-title>
-
-      </ion-toolbar>
-
-    </ion-header>
+ 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Drinks</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      
       <ion-grid>
         <ion-row>
           <ion-col id="side" size="0" size-md="3">
@@ -85,22 +71,7 @@ const getMenu = async () => {
 
 </script> 
 <style>
-.inline {
-  display: inline-flex;
 
-}
-
-.margin {
-  margin-right: 18em;
-}
-
-.ion-toolbar--end {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-
-
-}
 
 .recomendation {
   font-weight: 800;

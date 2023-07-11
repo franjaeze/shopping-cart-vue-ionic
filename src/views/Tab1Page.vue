@@ -1,19 +1,8 @@
 <template>
   <ion-page>    
-    <ion-header >
-      <ion-toolbar class="ion-toolbar--end">
-       <ion-title>  <img src="../../public/logo.png" alt="logo">Menu   <ion-icon class="alignment" aria-hidden="true" size="large" :icon="cart" />
-    {{ cartItems }} </ion-title>
-      </ion-toolbar>
-    
-    </ion-header>
-
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+  
+    <ion-content  >
+      
       <ion-grid>
         <ion-row>
           <ion-col id="side" size="0" size-md="3">
@@ -39,12 +28,12 @@
 </template>
 
 <script setup lang="ts">
-import Header from '../components/Header.vue'
+ 
 import { IonPage, IonRow, IonCol, IonGrid, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonButton } from '@ionic/vue';
 import { getFood } from '../services/foodServices.js'
 import listItem from '@/components/listItem.vue';
 import { reactive, onMounted, ref } from 'vue'
-import { cart } from 'ionicons/icons';
+ 
 import { storeToRefs } from 'pinia';
 import { useCartStore } from '../store/cartStore.js';
 
@@ -86,15 +75,6 @@ const getMenu = async () => {
 
 </script> 
 <style>
-ion-toolbar img{
-  margin-top:0.25em;
-  margin-right: 2em;
-  height: 2em;
-  width: 9em;
-  display: inline-flex;
-  border-radius: 10%;
-  border-color:  rgb(190, 134, 13)  ;
-  border-style: solid;
-}
+
 
 </style>

@@ -1,10 +1,7 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>  <img src="../../public/logo.png" alt="logo">   Bill</ion-title>
-      </ion-toolbar>
-    </ion-header>
+     
+     
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
