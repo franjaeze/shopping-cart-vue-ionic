@@ -1,25 +1,22 @@
 <template>
-  <ion-page>    
-  
-    <ion-content  >
-      
+  <ion-page>
+
+    <ion-content>
+
       <ion-grid>
         <ion-row>
           <ion-col id="side" size="0" size-md="3">
           </ion-col>
           <ion-col id="main" size="12" size-md="6">
             <ion-button v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
-            <div v-if="recomendation">
+            <div v-if="recomendation" class="recomendationbox">
               <h1 class="recomendation">Pick of the day</h1>
-              <div class="recomendationbox">
-                {{ recomendation.name }} <b> ----- > $</b>{{ recomendation.price }}<br>
-                <img class="imgthumb" :src="recomendation.img">
-              </div>
-            </div>
 
-<div class="gap">
-            <listItem class="accomodation" v-if="recomendation" :food="state.food" />
-            <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" /></div>
+
+              <listItem :food="recomendation" />
+            </div>
+            <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" />
+          
           </ion-col>
           <ion-col id="side" size="0" size-md="3"></ion-col>
         </ion-row></ion-grid>
@@ -28,12 +25,12 @@
 </template>
 
 <script setup lang="ts">
- 
+
 import { IonPage, IonRow, IonCol, IonGrid, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonButton } from '@ionic/vue';
 import { getFood } from '../services/foodServices.js'
 import listItem from '@/components/listItem.vue';
 import { reactive, onMounted, ref } from 'vue'
- 
+
 import { storeToRefs } from 'pinia';
 import { useCartStore } from '../store/cartStore.js';
 
@@ -74,7 +71,4 @@ const getMenu = async () => {
 
 
 </script> 
-<style>
-
-
-</style>
+<style></style>

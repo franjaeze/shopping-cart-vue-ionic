@@ -2,6 +2,13 @@ ion-grid{
   margin-top: 50px;
 }
  
+.ion-toolbar--end {
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
 ion-toolbar img{
   margin-top:0.25em;
   margin-right: 2em;
@@ -19,6 +26,8 @@ ion-toolbar img{
 
 .inline {
   display: inline-flex;
+  align-items: center;
+
 
 }
 
@@ -26,13 +35,7 @@ ion-toolbar img{
   margin-right: 18em;
 }
 
-.ion-toolbar--end {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-
-}
+ 
 /* ---------------------------------------------EFECTO LOCO DE VEGETALES MOVIENDOSE DE ACA PARA ALLA  ------------------
                                                 ---- EN LAS COLUMNAS DE LOS COSTADOS, PANTALLA GRANDE ----- */
  

@@ -2,9 +2,9 @@
             
         <ion-header  >
             <ion-toolbar class="ion-toolbar--end">
-                <ion-title class="inline"> <img src="../../public/logo.png" alt="logo">Menu <ion-icon class="alignment" aria-hidden="true"
+                <ion-title class="ion-toolbar--end"> <img  class= "inline" src="../../public/logo.png" alt="logo">Menu <ion-icon class="inline" aria-hidden="true"
                         size="large" :icon="cart" />
-       <!--              {{ cartItems }}  --> </ion-title>
+                    {{ cartItems }}  </ion-title>
             </ion-toolbar>
 
         </ion-header>
@@ -23,15 +23,11 @@ import {
     IonIcon
 
 } from "@ionic/vue";
-/* import { storeToRefs } from 'pinia';
+import { storeToRefs } from 'pinia';
 import { useCartStore } from '../store/cartStore.js';
 import {ref } from "vue";
 
-const cartStore = useCartStore();
-const { totalItems } = storeToRefs(cartStore);
 
-const cartItems = ref(totalItems)
- */
 export default {
     name: "Header",
 
@@ -47,10 +43,14 @@ export default {
     },
 
     setup() {
-  
+      const cartStore = useCartStore();
+const { totalItems } = storeToRefs(cartStore);
+
+const cartItems = ref(totalItems)
+
     
     return {
-      cart,
+      cart, cartItems
     
     };
   },
