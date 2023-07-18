@@ -26,7 +26,7 @@
                   </ion-item>
                 </ion-list>
                 <br>
-                <ion-text> <b>Total: {{ totalCost }}</b></ion-text>
+                <ion-text> <b>Total: $ {{ totalCost }}</b></ion-text>
                 <ion-button v-if="first" @click="showbox" expand="block" size="small" color="success"> Pay & Place
                   order!</ion-button>
 
@@ -50,7 +50,7 @@
               <ion-button @click="enjoy" expand="block" size="small" color="success"> Place Order!</ion-button>
             </div>
             <div v-if="last">
-              <h1> Thank you so much! Your order have been placed. Enjoy your meal and let us know how did it all have
+              <h1 class= 'success move'  @click="moveIsTrue"> Thank you so much! Your order have been placed. Enjoy your meal and let us know how did it all have
                 been</h1>
 
 
@@ -70,6 +70,7 @@ import { useCartStore } from '../store/cartStore.js';
 import { storeToRefs } from "pinia";
 import { ref, onMounted } from 'vue';
 
+ 
 const cartStore = useCartStore();
 const { totalItems, items, totalCost } = storeToRefs(cartStore);
 
@@ -78,6 +79,9 @@ let first = ref(true)
 let showpayment = ref(false)
 let payment2 = ref(false)
 let last = ref(false)
+let move = ref(false)
+
+const moveIsTrue = () => move.value=!move.value; 
 
 let showbox = () => {
   showpayment.value = !showpayment.value
@@ -94,4 +98,47 @@ let enjoy = () => {
 
 }
 
+ 
+
 </script>
+<style>
+.success{
+  color: tomato;
+ 
+ 
+}
+
+.success.move{
+  color: tomato;
+  animation: move 4s ease-in-out ;
+ 
+}
+
+@keyframes move {
+  0%  {
+    transform: translateY(1rem);
+  }
+  30% {
+    transform: translateY(-5rem);
+    color: rgb(209, 182, 95);
+  }
+  60% {
+    transform: translateY(-5rem);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+    color: rgb(139, 201, 58);
+  }
+  80% {
+    transform: translateY(7rem);
+    color: rgb(58, 103, 201);
+  }
+  90% {
+    transform: translateY(7rem);
+    color: rgb(201, 58, 77);
+  }
+  100% {
+    transform: translateY(-4rem);
+    color: rgb(201, 58, 77);
+  }
+}
+</style>

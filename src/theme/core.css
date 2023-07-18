@@ -2,19 +2,28 @@ ion-grid{
   margin-top: 50px;
 }
  
-.ion-toolbar--end {
-  display:  flex;
-  justify-content: space-between;
-  align-items: center;
-
+.shoppingCart {
+  margin-right: 1rem;
 
 }
+.toolbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #724b12;
+ 
+}
+
+ 
 ion-toolbar img{
   margin-top:0.25em;
-  margin-right: 2em;
+  margin-right: 1em;
   height: 2em;
   width: 9em;
-  display: inline-flex;
+/*   display: inline-flex; */
   border-radius: 10%;
   border-color:  rgb(190, 134, 13)  ;
   border-style: solid;
@@ -25,8 +34,8 @@ ion-toolbar img{
 }
 
 .inline {
-  display: inline-flex;
-  align-items: center;
+ /*  display:  flex; */
+ 
 
 
 }
@@ -51,13 +60,7 @@ ion-toolbar img{
   margin-right: 15px;
 }
 
-.ion-toolbar--end {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-
-}
+ 
 
 .gap {
   display: flex;
@@ -72,45 +75,26 @@ ion-toolbar img{
 
 
 
-
-
-
-/*  ----------------EFECTO COOL DE DESPLAZAMIENTO AUTOMATICO  ------------------ */
-
-/* #main{
-  background: rgb(28,29,29);
-background: linear-gradient(0deg, rgba(28,29,29,1) 0%, rgba(79,32,51,1) 20%, rgba(75,12,28,1) 46%, rgba(249,18,18,1) 74%, rgba(253,187,45,1) 100%);
-
-
-
-
-  height: 100%;
-  width: 100%;
  
- 
-  background-color: #E8BA9B;
- 
-  background-size: cover;
-  animation: scrollBg 3 3s linear forwards;
-
-}     @keyframes scrollBg {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-3330px);
-  }
-}             */
-
-
 @media (min-width:991px) {
 
+  ion-toolbar img{
  
-/* 
-  #main {
-    background: rgb(28, 29, 29);
-    background: linear-gradient(0deg, rgba(28, 29, 29, 1) 0%, rgba(79, 32, 51, 1) 20%, rgba(75, 12, 28, 1) 46%, rgba(249, 18, 18, 1) 74%, rgba(253, 187, 45, 1) 100%);
-  } */
+    margin-left: 2em;
+  
+  }
+ .recomendation-button{
+  margin-top: .75em;
+  margin-left: .75em;
+ }
+  .shoppingCart {
+    margin-right: 4rem;
+  
+  }
+  .menu-title{
+    
+    margin-right: 4em;
+  }
 
   .generalTitle {
     position: relative;

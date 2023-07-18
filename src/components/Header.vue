@@ -1,10 +1,14 @@
 <template>
             
         <ion-header  >
-            <ion-toolbar class="ion-toolbar--end">
-                <ion-title class="ion-toolbar--end"> <img  class= "inline" src="../../public/logo.png" alt="logo">Menu <ion-icon class="inline" aria-hidden="true"
-                        size="large" :icon="cart" />
-                    {{ cartItems }}  </ion-title>
+            <ion-toolbar  >
+       <!--          <ion-title class="ion-toolbar--end"> --><div class="toolbar" >
+
+       
+                   <img  class= "inline" src="../../public/logo.png" alt="logo">
+                  <h1 class="menu-title">Menu </h1> 
+                  <div class="shoppingCart"> <ion-icon class="inline" aria-hidden="true"    size="large" :icon="cart" />
+                    {{ cartItems }}  </div><!-- </ion-title> --></div>
             </ion-toolbar>
 
         </ion-header>

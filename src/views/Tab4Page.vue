@@ -8,7 +8,7 @@
                     <ion-col id="side" size="0" size-md="3">
                     </ion-col>
                     <ion-col size="12" size-md="6">
-                        <ion-button v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
+                        <ion-button   class="recomendation-button" v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
                         <div v-if="recomendation" class="recomendationbox">
                             <h1 class="recomendation">Pick of the day</h1>
 
@@ -88,13 +88,7 @@ const getMenu = async () => {
     margin-right: 15px;
 }
 
-.ion-toolbar--end {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
 
-
-}
 
 .recomendation {
     font-weight: 800;
