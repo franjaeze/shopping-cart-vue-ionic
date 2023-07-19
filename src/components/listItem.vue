@@ -1,8 +1,8 @@
 <template>
-  <ion-card class='header' :style="{ backgroundImage: 'url(' + food.img + ')' }">
-
+  <ion-card class='header' :style="{ backgroundImage: 'url(' + (food.img ? food.img : defaultImage) + ')' }">
+ 
     <ion-card-header>
-
+    
       <ion-card-subtitle class="alingicons">
         <!--   <img class="imgthumb" :src="food.img">  -->
         <p class="classicText"> {{ food!.dsc }}</p>
@@ -12,17 +12,17 @@
 
       </ion-card-title>
 
-    </ion-card-header>
+    </ion-card-header> {{console.log (food.img) }}
    
     <ion-card-content class="alingicons">
-      <div class="price">$ {{ food!.price }} </div> 
+      <div class="price">$ {{ food!.price }}    </div> 
       <div class="price2"><span class="cursor" @click="addValue">
         <IonIcon :icon="addCircleOutline" size="large"></IonIcon>
       </span>
       <span class="cursor" @click="removeValue">
         <IonIcon :icon="removeCircleOutline" size="large"></IonIcon>
       </span></div>
-    </ion-card-content>
+    </ion-card-content> 
   </ion-card>
 </template>
   
@@ -97,7 +97,8 @@ export default {
   data() {
     return {
       addCircleOutline,
-      removeCircleOutline
+      removeCircleOutline,
+      defaultImage: "../../public/chili.png"
     }
   }
 
@@ -132,7 +133,8 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
- background-color: #a09368;
+  background-color: #d2c392; 
+  
  
 
 }
@@ -202,6 +204,6 @@ export default {
   padding-left: .2rem;
 }
 
-
+ 
 
 </style>

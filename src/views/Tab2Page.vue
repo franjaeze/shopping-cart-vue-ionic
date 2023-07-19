@@ -3,22 +3,26 @@
  
     <ion-content :fullscreen="true">
       
-      <ion-grid>
-        <ion-row>
-          <ion-col id="side" size="0" size-md="3">
+      <ion-grid  ><ion-button class="recomendation-button" v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
+            <div v-if="recomendation" class="recomendationbox">
+              <h1 class="recomendation">Pick of the day</h1>
+
+
+              <listItem :food="recomendation" />
+            </div>
+        <ion-row>  
+ 
+        
+          <ion-col id="main" size="12" size-md="4"
+          v-for="food in resultado.encontrado" :key="food.id"
+          
+          
+          
+          >  <listItem  :food="food" />
+            
+          
           </ion-col>
-          <ion-col size="12" size-md="6">
-            <ion-button  class="recomendation-button" v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
-                        <div v-if="recomendation" class="recomendationbox">
-                            <h1 class="recomendation">Pick of the day</h1>
-
-
-                            <listItem :food="recomendation" />
-                        </div>
          
-            <listItem v-for="food in resultado.encontrado" :key="food.id" :food="food" />
-          </ion-col>
-          <ion-col id="side" size="0" size-md="3"></ion-col>
         </ion-row></ion-grid>
     </ion-content>
   </ion-page>
