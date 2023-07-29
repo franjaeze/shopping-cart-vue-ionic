@@ -22,6 +22,7 @@
               <ion-card-content>
                 <ion-list>
                   <ion-item v-for="item in items" :key="item.id">
+                   
                     <b>{{ item.name }}</b>-- x {{ item.count }} -- $ {{ item.price }} = ${{ item.price * item.count }}
                   </ion-item>
                 </ion-list>
@@ -29,7 +30,7 @@
                 <ion-text> <b>Total: $ {{ totalCost }}</b></ion-text>
                 <ion-button v-if="first" @click="showbox" expand="block" size="small" color="success"> Pay & Place
                   order!</ion-button>
-
+ 
 
               </ion-card-content>
             </ion-card>

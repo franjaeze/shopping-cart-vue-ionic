@@ -6,7 +6,7 @@
       <ion-grid  ><ion-button class="recomendation-button" v-if="!recomendation" @click="getRecomendation"> Get Recomendation</ion-button>
             <div v-if="recomendation" class="recomendationbox">
               <h1 class="recomendation">Pick of the day</h1>
-
+   <!--            <ion-button @click="getDataFromWebPage()"> click on me</ion-button> -->
 
               <listItem :food="recomendation" />
             </div>
@@ -34,7 +34,7 @@ import { IonPage, IonRow, IonCol, IonGrid, IonHeader, IonToolbar, IonTitle, IonC
 import { getFood } from '../services/foodServices.js'
 import listItem from '@/components/listItem.vue';
 import { reactive, onMounted, ref } from 'vue'
-
+ 
 import { storeToRefs } from 'pinia';
 import { useCartStore } from '../store/cartStore.js';
 
@@ -68,6 +68,7 @@ const getMenu = async () => {
   const res = await getFood()
   resultado.encontrado = res.slice(0, 25).map(({ name, price, dsc, img, id }) => ({ name, price, dsc, img, id }));
 }
+
 
 
 

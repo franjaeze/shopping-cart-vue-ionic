@@ -82,9 +82,10 @@ export default {
 
   methods: {
     addValue() {
-      this.logout()
-      console.log(this.totalItems)
+      console.log(this.food)
+    
       this.cart.addItem(this.food)
+      console.log(this.totalItems)
 
     },
     removeValue() {
