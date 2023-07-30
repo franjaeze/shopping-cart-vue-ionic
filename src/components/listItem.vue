@@ -16,11 +16,11 @@
    
     <ion-card-content class="alingicons">
       <div class="price">$ {{ food!.price }}    </div> 
-      <div class="price2"><span class="cursor" @click="addValue">
-        <IonIcon :icon="addCircleOutline" size="large"></IonIcon>
+      <div class="price2"><span class="cursor plus-minus" @click="addValue">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
       </span>
-      <span class="cursor" @click="removeValue">
-        <IonIcon :icon="removeCircleOutline" size="large"></IonIcon>
+      <span class="cursor plus-minus" @click="removeValue">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
       </span></div>
     </ion-card-content> 
   </ion-card>
@@ -135,6 +135,10 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #d2c392; 
+  border: 5px groove black;
+  border-radius: 2% ;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  max-height: 50vh;
   
  
 
@@ -157,11 +161,11 @@ export default {
 .classicText {
   position: relative;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 22px;
+  font-size: .8rem;
   font-weight: 300;
   color: #000000;
   letter-spacing: 0.3em;
-  text-transform: uppercase;
+ 
   perspective: 500px;
   text-shadow: 0px 0px 15px #ebe5dc, 0px 0px 15px #eccf76d9, 0px 0px 20px #ee804c,
     0px 0px 25px #c93103;
@@ -182,12 +186,17 @@ export default {
   margin-left: 3rem;
   text-align: center;
   justify-items: center;
-  background-color: #e2dabe75;
+/*   background-color: #e2dabe75; */
   border-radius: 25%;
- 
+ transition: all 0.3s;
   padding-right: .2rem;
   padding-left: .2rem;
 
+}
+.price:hover {
+  color: #be9e1c;
+  text-shadow: 0px 0px 5px #181818, 0px 0px 10px #242322d9, 0px 0px 10px #110e07,
+    0px 0px 20px #221b11;
 }
 
 .price2 {
@@ -198,13 +207,29 @@ export default {
   margin-right: 1rem;
   text-align: center;
   justify-items: center;
-  background-color: #74706375;
+/*   background-color: #74706375; */
   border-radius: 25%;
   padding-top: .25rem;
   padding-right: .2rem;
   padding-left: .2rem;
 }
+.plus-minus{
+  margin-left:.7rem;
+  font-size:1.5rem;
+  fill:#947706;
+  transition: 0.4s all
+ ;
+}
 
+.plus-minus:hover{
+  fill: #f3d046;
+  font-size: 1.78rem;
+  transform: scale(1.05);
+}
+.plus-minus:active{
+  fill: #574707;
+  transform: scale(.9);
+}
  
 
 </style>
