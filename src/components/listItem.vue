@@ -183,7 +183,7 @@ export default {
   text-shadow: 0px 0px 5px #947706, 0px 0px 10px #e2c15dd9, 0px 0px 10px #eed49d,
     0px 0px 20px #aa9c88;
     display: flex;
-  margin-left: 3rem;
+ 
   text-align: center;
   justify-items: center;
 /*   background-color: #e2dabe75; */
