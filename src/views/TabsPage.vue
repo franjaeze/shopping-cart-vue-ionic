@@ -6,17 +6,17 @@
       <ion-tab-bar slot="bottom">  
         <ion-tab-button tab="tab1" href="/tabs/tab1">
           <ion-icon aria-hidden="true" :icon="restaurant" />
-          <ion-label>Menu</ion-label>
+          <ion-label>  Veggie   <!-- Menu --></ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="tab2" href="/tabs/tab2">
-          <ion-icon aria-hidden="true" :icon="wine" />
-          <ion-label>Drinks</ion-label>
+          <ion-icon aria-hidden="true" :icon="fastFood" />  <!-- :icon="wine" -->
+          <ion-label>Traditional   <!-- Drinks --></ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="tab4" href="/tabs/tab4">
-          <ion-icon aria-hidden="true" :icon="iceCream" />
-          <ion-label>Dessert</ion-label>
+          <ion-icon aria-hidden="true" :icon="fish" /><!-- :icon="iceCream" -->
+          <ion-label> Sushi <!-- Dessert --></ion-label>
         </ion-tab-button>
     
 
@@ -31,6 +31,6 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { restaurant, card, wine,iceCream } from 'ionicons/icons';
- 
+import { restaurant, card,fastFood, fish } from 'ionicons/icons';
+ /*  wine,iceCream */
 </script>

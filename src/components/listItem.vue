@@ -150,6 +150,7 @@ export default {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
+  margin: 0.25rem 0.25rem;
   color: #f5f5f5;
   letter-spacing: 0.2em;
   text-transform: uppercase;

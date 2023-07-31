@@ -19,7 +19,7 @@ const getFood = async () => {
     } catch (error) {
         console.error("Error de conexión:", error.message);
         // datos alternativos
-        return alternativeData1;
+        return veggie;
     }
 }
 
@@ -30,7 +30,7 @@ const getIceCream = async () => {
         return response.data
     } catch (error) {
         console.error("Error de conexión:", error.message);
-        return alternativeData2;
+        return sushi;
     }
 }
 
@@ -41,184 +41,127 @@ const getDrinks = async () => {
         return response.data
     } catch (error) {
         console.error("Error de conexión:", error.message);
-        return alternativeData3;
+        return laPerlita;
     }
 }
 
 
-const alternativeData1 = [
+const veggie = [
     {
         id: 5729,
         price: 6608,
         name: '2 Pokes a Elección',
-        img: 'https://images.rappi.com.ar/products/dfd53e9f-4542-4537-8e98-d024fee4b194-1681478053051.png?e=webp&d=125x125&q=40',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5isJ8vuvXgvTMDXQXkhZF94iVcXkxjfYmdg&usqp=CAU',
         dsc: '2 pokes a elección'
     },
     {
         id: 9851,
         price: 2500,
         name: 'Crazy Nachos',
-        img: 'https://images.rappi.com.ar/products/4d303361-8090-479a-a57e-9fc02bee8159-1664538976698.png?e=webp&d=125x125&q=40',
+        img: 'https://images-gmi-pmc.edge-generalmills.com/4f5b624d-c9d0-4a75-acfe-fadbe40a7d1e.jpg',
         dsc: 'Nachos caseros sin gluten + porotos negros + choclo tostado + cilantro + guacamole.'
     },
     {
         id: 2674,
         price: 4200,
         name: 'Armá Tu Tabla',
-        img: 'https://images.rappi.com.ar/products/ad6c1bd1-bf34-4bc1-9eb4-94105981e7d7-1664539035779.png?e=webp&d=125x125&q=40',
+        img: 'https://www.kathysvegankitchen.com/wp-content/uploads/2020/10/vegan-poke-bowl-.jpg',
         dsc: 'Elegí tus 12 rolls'
     },
     {
         id: 8197,
         price: 3120,
         name: 'Avocado Poke',
-        img: 'https://images.rappi.com.ar/products/0dc797ff-4f8d-4f58-b6f4-8d88ae04b5bb-1664539524472.png?e=webp&d=125x125&q=40',
+        img: 'https://eatwithclarity.com/wp-content/uploads/2022/01/vegan-tofu-poke-bowl-500x500.jpg',
         dsc: 'Base de arroz shari + zanahoria glaseada + palta + hilos de batata crispy + sésamo negro + verdeo + adicional de salsa teriyaki.'
     },
     {
         id: 4932,
         price: 3240,
         name: 'Crunchy Poke',
-        img: 'https://images.rappi.com.ar/products/31ddc156-4972-4426-abfa-0cce46bc2135-1664539541485.png?e=webp&d=125x125&q=40',
+        img: 'https://thegourmetbonvivant.com/wp-content/uploads/2023/01/poke-bowl-ft.jpg',
         dsc: 'Base de arroz shari, vegadelfia, tartar de hongos con morrón ahumado y verdeo, palta, salsa de zanahoria y jengibre, tierra de nachos, salsa teriyaki.'
     },
     {
         id: 1745,
         price: 3320,
         name: 'Fideos Huancaína',
-        img: 'https://images.rappi.com.ar/products/e13e543c-c754-47ac-9720-695b9827ea57-1664539351505.png?e=webp&d=125x125&q=40',
+        img: 'https://twokooksinthekitchen.com/wp-content/uploads/2020/06/vegetable-pasta-wine-sauce.jpg',
         dsc: 'Fideos de arroz, salteado con hongos horneados y salsa huancaína.'
     },
     {
         id: 8263,
         price: 3320,
         name: 'V Thai',
-        img: 'https://images.rappi.com.ar/products/fd85921f-81c7-42cd-9a27-b294f5497e4a-1664539375795.png?e=webp&d=125x125&q=40',
+        img: 'https://www.jessicagavin.com/wp-content/uploads/2016/07/crunchy-thai-salad-with-peanut-sauce-dressing-eating-with-chopsticks-1200.jpg',
         dsc: 'Fideos de arroz salteados en hongos, cebolla, morrón, brócoli, salsa de tamarindo, maní, cilantro.'
     },
     {
         id: 3156,
         price: 2952,
         name: 'Ensalada Caesar',
-        img: 'https://images.rappi.com.ar/products/b781c605-5e58-4e5b-8f07-6ee51703a3c2-1664539638934.png?e=webp&d=125x125&q=40',
+        img: 'https://www.recipetineats.com/wp-content/uploads/2016/05/Caesar-Salad_7-SQ.jpg',
         dsc: 'Lechuga, kale, croutons de tofu, garbanzos crispy, raw-mesan cheese, cherry confitados, palta y aderezo caesar.'
     },
     {
         id: 7329,
         price: 2952,
         name: 'Ensalada de Quinoa',
-        img: 'https://images.rappi.com.ar/products/0292b456-cdf7-4e25-a8e5-4ee6c809fa90-1664539850038.png?e=webp&d=125x125&q=40',
+        img: 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2019-11-recipe-mediterranean-quinoa-salad%2F2019-10-21_Kitchn89095_Mediteranean-Quinoa-Salad',
         dsc: 'Quinoa roja + kale + boniato asado + zanahorias glaseadas + cebolla encurtida + queso de cajú + castañas de cajú tostadas + vinagreta de limón.'
     }
 ];
 
-const alternativeData2 = [
+const sushi = [
+ 
     {
-        id: 56123413433378,
-        price: 6961,
+        
+        price: 6558,
         name: '2 Sushi Salad a Elección',
-        img: 'https://images.rappi.com.ar/products/8307eedd-ecfd-4e24-b84f-5ff94bee7045-1667301181891.png?e=webp&d=125x125&q=40',
-        dsc: 'Elegí tus sushi salad favoritas.'
-    },
+        img: 'https://greenkitchenstories.com/wp-content/uploads/2010/05/Sushi_salad_2.jpg',
+        dsc: 'Elegí tus sushi salad favoritas.',
+        id: 659507859193148
+      },
+ 
     {
-        id: 5632423423478,
-        price: 1558,
-        name: 'Harumakis a Elección X 4.',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Elegí tus harumakis favoritos.'
-    },
+         
+        price:5685,
+        name: 'Clasica X 20 + Cerveza',
+    img: 'https://properfoodie.com/wp-content/uploads/2020/07/featured-sushi-2b-feature-sushi-2b-1.jpg',
+    dsc: '5 Niguiri salmon + 5 rain + 5 citric + 5 tamago + cerveza patagonia 410ml.',
+    id: 313491897179293
+  },
     {
-        id: 123434,
+        
         price: 3685,
-        name: 'Salad Clásica',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Base de arroz shari, salmón flambleado palta, sésamo mixto y phila.'
-    },
+        name: 'Kaze X 12 + Mizu X 15 + Gaseosa 1,5Lt',
+        img: 'https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/09/sushi-sashimi-1296x728-header.jpg?w=1155&h=1528',
+        dsc: '5 Spring + 5 california + 2 niguiris salmon y 5 sake + 5 skin + 5 california + gaseosa 1,5l.',
+        id: 949652796393924},
     {
-        id: 1234,
         price: 3685,
-        name: 'Salad Special',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Base de arroz shari, salmón en cubos, palta, phila, coronado con sésamo mixto.'
-    },
+        name: 'Tabla Kanuomi X 15 y 1 Sushi Salad',
+        img: 'https://cdn-fegfh.nitrocdn.com/bJwdeZsObtsROHbGJsKNNvJfYjZSwUGF/assets/images/optimized/rev-4b45196/www.kobeteppanyaki.com.au/wp-content/uploads/2020/08/Traditional-Japanese-Sushi-vs.-Western-Sushi-1.jpg',
+        dsc: 'Tabla kanu x 15 con 1 sushi salad a elección.',
+        id: 815140420542150
+      },
     {
-        id: 123423,
-        price: 4961,
-        name: 'Hot X 15 Unidades',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: '5 ny phila hot + 5 maki hot + 5 ebi hot.'
-    },
-    {
-        id: 2341,
+        
         price: 6378,
-        name: 'Clásica de Salmón X 20 Unidades',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: '5 niguiri salmon + 5 rain roll + 5 citric + 5 tamago.'
-    },
+        name: 'Full Salmón X 40 + Gaseosa 1,5 Lt.',
+        img: 'https://statics-cuidateplus.marca.com/cms/styles/ratio_43/azblob/sushi.jpg.webp?itok=zQFYWKDM',
+        dsc: '5 Croc + 5 ocean + 5 bs as + 5 tamago + 10 bs as hot + 5 niguiris + 5 geishas + gaseosa 1,5l.',
+        id: 986761673901131
+      },
     {
-        id: 789000,
+        
         price: 9213,
-        name: 'Rainbow X 30 Unidades',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: '5 sem + 5 phila + 5 bs as + 5 citric + 5 niguiri salmon + 3 sashimi + 2 geishas.'
-    },
-    {
-        id: 98978778,
-        price: 1890,
-        name: 'Philadelphia Roll',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Roll de salmón y phila cubierto en sésamo negro.'
-    },
-    {
-        id: 6789789,
-        price: 1890,
-        name: 'Rain Roll',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Roll de salmón, palta, Phila cubierto en sésamo mixto'
-    },
-    {
-        id: 578978,
-        price: 2079,
-        name: 'Tropic Roll',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Salmón y phila cubierto en mango bañado en salsa de maracuyá con crocante de batata.'
-    },
-    {
-        id: 678978,
-        price: 2079,
-        name: 'Hot Buenos Aires Roll',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Salmón, palta y phila rebozado en panko.'
-    },
-    {
-        id: 56678978,
-        price: 2079,
-        name: 'Hot Futu Roll',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Langostino furai y phila cubierto en panko y salsa futurama.'
-    },
-
-    {
-        id: 5678978,
-        price: 2763,
-        name: 'Sashimi de Salmón X4',
-        name: 'Sashimi de Salmón X4',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Sashimi de salmon.'
-    },
-    {id: 145674328,
-        price: 3529,
-        name: 'Yakisoba',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Salteado de tallarines y verduras con proteína a elección.'
-    },
-    {
-        id: 145678,
-        price: 4783,
-        name: 'Ceviche Mixto',
-        img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-        dsc: 'Salmón y pescado blanco en cubos, lechuga, choclo, cebolla morada, camote glaseado, maíz cancha y leche de tigre.'
-    }
+        name: 'Shrimp & Salmón X 15 + Tabla Omakase X15',
+        img: 'https://www.kitchensanctuary.com/wp-content/uploads/2019/07/Salmon-Sushi-Salad-square-FS.jpg',
+        dsc: 'Tabla shrimp & salmón x 15 + tabla omakase x 15.',
+        id: 556782679036090
+      },
+   
 ]
 
 
@@ -309,41 +252,228 @@ const alternativeData3 = [
     }
 ]
 
+
+const postre = [
+    {
+        id: 9679976,
+      price: 2400,
+      name: '2 Bagels con Jamón y Queso + Café + Jugo',
+      img: 'https://images.rappi.com.ar/products/1cb40169-1674-4c4d-b3d4-385fb091c3fb-1648561131464.png?e=webp&d=125x125&q=40',
+      dsc: '2 Mini bagels con jamón y queso, café a elección y jugo de naranja exprimido.'
+    },
+    {  id: 3234545,
+      price: 6847,
+      name: 'Bandeja Matera',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Bandeja con mix de bocaditos dulces, ideales para la hora del mate.'
+    },
+    {  id: 35436345,
+      price: 1847,
+      name: 'Bandeja de Postre',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Bandeja con mix de bocaditos dulces, especialmente con dulce de leche y chocolate.'
+    },
+    {  id: 3453456564545,
+      price: 8538,
+      name: 'Desayuno Completo',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Brownie, alfajor, vaso térmico, porcion de budin, chipacitos, porción de torta, infusiones en sobrecito, jugo, tarjeta para dedicatoria.'
+    },
+    {  id: 34534345623464567455,
+      price: 2050,
+      name: 'Chocotorta',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Torta chocotorta por porción.'
+    },
+    {  id: 765674444,
+      price: 1060,
+      name: 'Cuadrado Havannete',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Cuadrado de dulce de leche, chocolate.'
+    },
+    {  id: 4567445,
+      price: 2747,
+      name: 'Budin de Limon y Amapolas (mediano)',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Budin super humedo de limon y amapolas, cubierto con glase. 500grs.'     
+    },
+    {  id: 34586785679345,
+      price: 2747,
+      name: 'Budin de Frutos Rojos y Choco B Mediano',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Budin super humedo, con frutos rojos y chocolate blanco. 500grs.'        
+    },
+    {  id: 36575685345,
+      price: 1400,
+      name: 'Mix de Alfajorcitos (6)',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: '6 Mix de alfajorcitos.'
+    },
+    {  id: 567567885,
+      price: 790,
+      name: 'American Cookies',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Galleta de vainilla.'
+    },
+    {  id: 657858995345,
+      price: 300,
+      name: 'Chipacitos (6)',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: '6 panes de queso a base de fécula de mandioca.'
+    },
+    {  id: 5645768685,
+      price: 500,
+      name: 'Medialuna con Jamón & Queso',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Medialuna de manteca, rellena con jamón y queso.'
+    },
+    {  id:675685345,
+      price: 2400,
+      name: 'Medialunas de Manteca (docena)',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Docena de medialunas de manteca, con almibar. Calentitas.'
+    }
+  ]
+
+const elSaborACasa = [
+    {
+      price: 3286.25,
+      name: '11 Medialunas + 1 Gratis',
+      img: 'https://images.rappi.com.ar/products/25b242ef-ddb1-4db4-bac8-40f1d3c3b485-1667501589974.png?e=webp&d=125x125&q=40',
+      dsc: '12 medialunas a elección.',
+      id: 72832152414979
+    },
+    {
+      price: 2873.75,
+      name: '3 Medialunas Rellenas',
+      img: 'https://images.rappi.com.ar/products/c72db20a-b8bc-471d-aec9-4509f82061ac-1667501482143.png?e=webp&d=125x125&q=40',
+      dsc: '3 medialunas rellenas a elección.',
+      id: 932506339922026
+    },
+    {
+      price: 1399.13,
+      name: 'Chipa X 10',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: '10 chipás de queso.',
+      id: 311527932000286
+    },
+    {
+      price: 436.63,
+      name: 'Dona Rosa Rellena',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Dona rellena de dulce de leche bañada en chocolate rosa y granas.',      
+      id: 969332378995297
+    },
+    {
+      price: 436.63,
+      name: 'Dona Glaseada',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Dona con glaseado de azúcar.',
+      id: 401880123200780
+    },
+    {
+      price: 436.63,
+      name: 'Dona Rellena Bañada de Chocolate',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Dona rellena de dulce de leche bañada en chocolate negro.',
+      id: 420463318653698
+    },
+    {
+      price: 998.75,
+      name: 'Medialuna con Jamón y Queso',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Medialuna con jamón y queso.',
+      id: 736535512753956
+    }
+  ]
+
+  const elArmenio = [
+    {
+      price: 3600,
+      name: '2 Shawarma de Ternera',
+      img: 'https://images.rappi.com.ar/products/2111576152-1633445481717_hq.jpeg?e=webp&d=125x125&q=40',
+      dsc: 'Carne de ternera en trozos con salsa típica (taratour) acompañada de lechuga, cebolla y tomate envuelta en pan lavash.',
+      id: 21257035342197
+    },
+    {
+      price: 470,
+      name: 'Fatay',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Empanada oriental de carne cerrada en triangulo.',
+      id: 384961920263790
+    },
+    {
+      price: 695,
+      name: 'Lehmeyún de Carne',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Empanada oriental abierta de carne.',
+      id: 341939233455626
+    },
+    {
+      price: 1890,
+      name: 'Pilav con Pollo a la Crema 1/2 Porción.',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Arroz con fideos cabello de ángel tostados, acompañados de pollo con salsa de crema y cebolla.',
+      id: 75381535239386
+    },
+    {
+      price: 1300,
+      name: 'Falafel X 6',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: '6 albóndigas de garbanzos y trigo con salsa típica.',
+      id: 82780041710640
+    },
+    {
+      price: 1881,
+      name: 'Shawarma de Ternera',
+      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+      dsc: 'Carne de ternera en trozos con salsa típica ("taratour") acompañada de lechuga, cebolla y tomate envuelta en pan lavash.',
+      id: 872055393298298
+    }
+  ]
+
+  const laPerlita = [
+    {
+      price: 3900,
+      name: 'Suprema a la Maryland',
+      img: 'https://www.saveur.com/uploads/2021/06/04/Suprema-Maryland-El-Gobo-Buenos-Aires-Kevin-Vaughn-Saveur.jpg?auto=webp',
+      dsc: 'Suprema de pollo con papas paille, crema de choclos, banana, manzana, jamón.',
+      id: 592399248967115
+    },
+    {
+      price: 3400,
+      name: 'Milanesa de Ternera Napolitana con Papas',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM928IMq8zkQc_8kRgQtFEiASSdOW1qLIjbpAShovUYWfSGdzbfe9wTYNPLJmkEzK4EuM&usqp=CAU', 
+      dsc: 'Milanesa gratinada con muzzarella, salsa de tomate, jamón y papas fritas.',
+      id: 294935138658273
+    },
+    {
+      price: 7800,
+      name: 'Pacu de Criadero Rosamonte',
+      img: 'https://www.cocina-brasilena.com/base/stock/Recipe/218-image/218-image_web.jpg',
+      dsc: 'Pacu de 500g a la parrilla con verduras grilladas.',
+      id: 210793246430067
+    },
+    {
+      price: 4900,
+      name: 'Matambrito de Cerdo',
+      img: 'https://assets.unileversolutions.com/recipes-v2/210000.jpg',
+      dsc: 'Matambrito de cerdo a la crema de verdeo con papas noisette.',
+      id: 763025133470300
+    },
+    {
+      price: 10900,
+      name: 'Entraña Emperador para 2',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9fgN0WFG7ScJZ9LbgozKlg7h2bUIh-UYceYzzF1X2kMKH34UUBLdyyI5m3rxODhPAk-w&usqp=CAU',   
+      dsc: 'Entraña a la parrilla con papas fritas y ensalada mixta salsa criolla chimi para dos personas.(1kg).',
+      id: 902864106700631
+    }
+  ]
+
 const generateRandomId = () => {
     return Math.floor(Math.random() * 10000000);
 };
 
-
-
-// Agregamos el atributo "id" y verificamos las imágenes de cada objeto en el primer array
-const processedAlternativeData1 = alternativeData1.map((item) => ({
-    id: generateRandomId(),
-    price: item.price,
-    name: item.name,
-    img: item.img,
-    dsc: item.dsc,
-}));
-
-// Agregamos el atributo "id" y verificamos las imágenes de cada objeto en el segundo array
-const processedAlternativeData2 = alternativeData2.map((item) => ({
-    id: generateRandomId(),
-    price: item.price,
-    name: item.name,
-    img: item.img,
-    dsc: item.dsc,
-}));
-
-// Agregamos el atributo "id" y verificamos las imágenes de cada objeto en el tercer array
-const processedAlternativeData3 = alternativeData3.map((item) => ({
-    id: generateRandomId(),
-    price: item.price,
-    name: item.name,
-    img: item.img,
-    dsc: item.dsc,
-}));
-
-console.log(processedAlternativeData1);
-console.log(processedAlternativeData2);
-console.log(processedAlternativeData3);
+ 
 
 export { getFood, getDrinks, getIceCream };
