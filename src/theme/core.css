@@ -4,6 +4,8 @@ ion-grid{
  
 .shoppingCart {
   margin-right: 1rem;
+  display: flex;
+  justify-content: center;
 
 }
 .toolbar{

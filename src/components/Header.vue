@@ -7,8 +7,8 @@
        
                    <img  class= "inline" src="../../public/logo.png" alt="logo">
                   <h1 class="menu-title">Menu </h1> 
-                  <div class="shoppingCart"> <ion-icon class="inline" aria-hidden="true"    size="large" :icon="cart" />
-                    {{ cartItems }}  </div><!-- </ion-title> --></div>
+                  <div class="shoppingCart">   <div class="padding"><ion-icon class="inline" aria-hidden="true"    size="large" :icon="cart" />
+                  {{ cartItems }} </div> </div><!-- </ion-title> --></div>
             </ion-toolbar>
 
         </ion-header>
@@ -61,6 +61,12 @@ const cartItems = ref(totalItems)
 }
 </script>
 <style>
+
+.shoppingCart ion-icon{
+  margin-right: 0.5rem;
+  fill: #724b12;
+ 
+}
  
 </style>
  

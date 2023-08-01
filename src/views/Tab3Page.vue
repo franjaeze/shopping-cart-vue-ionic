@@ -14,20 +14,22 @@
           </ion-col>
           <ion-col size="12" size-md="6">
             <ion-card>
+              <div class="padding">
               <ion-icon    :icon="cart" size="large" />
-              <ion-text>Amount of items ordered {{ totalItems }}</ion-text>
-              <ion-card-title>
-                Items
-              </ion-card-title>
+              <ion-text>Amount of items ordered <span class="number">{{ totalItems }}</span> </ion-text></div>
+              <div class="padding">
+              <ion-card-title class="cart-title">
+                Cart
+              </ion-card-title></div>
               <ion-card-content>
                 <ion-list>
-                  <ion-item v-for="item in items" :key="item.id">
+                  <ion-item v-for="item in items" :key="item.id"> 
                    
                     <b>{{ item.name }}</b>-- x {{ item.count }} -- $ {{ item.price }} = ${{ item.price * item.count }}
                   </ion-item>
                 </ion-list>
                 <br>
-                <ion-text> <b>Total: $ {{ totalCost }}</b></ion-text>
+                <ion-text> <b>Total:  <span class="total">$ {{ totalCost }}</span></b></ion-text>
                 <ion-button v-if="first" @click="showbox" expand="block" size="small" color="success"> Pay & Place
                   order!</ion-button>
  
@@ -142,4 +144,28 @@ let enjoy = () => {
     color: rgb(201, 58, 77);
   }
 }
+
+.padding{
+  padding:1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .cart-title{
+  font-weight: bold;
+  letter-spacing: 1.22px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.75rem;
+ }
+ .number{
+  font-weight: bold;
+  font-size: 1.15rem;
+ }
+.total{
+  font-weight: bold;
+  font-size: .95rem;
+  color: forestgreen;
+}
+
 </style>
