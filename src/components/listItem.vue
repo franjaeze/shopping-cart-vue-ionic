@@ -1,6 +1,6 @@
 <template>
-  <ion-card class='header' :style="{ backgroundImage: 'url(' + (food.img ? food.img : defaultImage) + ')' }">
- 
+  <ion-card class='header'>
+   <div class="image-container" :style="{ backgroundImage: 'url(' + (food.img ? food.img : defaultImage) + ')' }">
     <ion-card-header>
     
       <ion-card-subtitle class="alingicons">
@@ -22,7 +22,7 @@
       <span class="cursor plus-minus" @click="removeValue">
         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
       </span></div>
-    </ion-card-content> 
+    </ion-card-content> </div>
   </ion-card>
 </template>
   
@@ -115,35 +115,40 @@ export default {
 }
 
  
-
 .cursor {
   cursor: pointer;
 
 }
 
-.imgthumb {
-  max-width: 25%;
-  border-radius: 5%;
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-}
 
 .header {
-  background-size: cover;
+ /*  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #d2c392; 
+  background-color: #d2c392;  */
   border: 5px groove black;
   border-radius: 2% ;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   max-height: 50vh;
-  
- 
-
+  overflow: hidden;
+  position: relative;
+   
+  transition: .4s all;
 }
+.header:hover .image-container {
+transform: scale(1.02);
  
+}
+.image-container {
+  /* Estilos del contenedor de la imagen */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #d2c392;
+  transition: transform 2s;
+}
 
 .generalTitle {
   position: relative;

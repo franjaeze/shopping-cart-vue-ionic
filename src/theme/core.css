@@ -74,7 +74,9 @@ ion-toolbar img{
   list-style: none;
   flex-basis: 33.333333%
 }
-
+.recomendation-button{
+  margin-top:2rem;
+}
 
 
  
@@ -112,4 +114,10 @@ ion-toolbar img{
       0px 0px 20px #a57229;
   }
 
+  .recomendation-button{
+    margin-top:2rem;
+  }
 }
+
+
+ 
